@@ -148,11 +148,13 @@ class Proj
         if (preg_match('/(GEOGCS|GEOCCS|PROJCS|LOCAL_CS)/', $srsCode)) {
             $this->to_rads = COMMON::D2R;
 
-            $params=Wkt::Parse($srsCode);
+            $params = Wkt::Parse($srsCode);
 
             // TODO: find a better way to apply wkt params to this instance
-            foreach ($params as $k => $v) {
-                $this->$k = $v;
+            if (is_array($params)) {
+                foreach ($params as $k => $v) {
+                    $this->$k = $v;
+                }
             }
 
             if (isset($this->defData)) {
