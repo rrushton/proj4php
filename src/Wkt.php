@@ -340,7 +340,7 @@ class Wkt {
 	private static function ParseWKTIntoSections($wktStr) {
 		$regex = '/^(\w+)\[(.*)\]$/';
 
-		if (false === ($match = preg_match($regex, $wktStr, $wktMatch))) {
+		if (false === ($match = preg_match($regex, trim($wktStr), $wktMatch))) {
 			return;
 		}
 		if (!isset($wktMatch[1])) {
