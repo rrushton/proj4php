@@ -151,9 +151,11 @@ class Proj
             $params = Wkt::Parse($srsCode);
 
             // TODO: find a better way to apply wkt params to this instance
-            if (is_array($params)) {
+            if (is_object($params)) {
                 foreach ($params as $k => $v) {
-                    $this->$k = $v;
+                    if (!isset($this->$k)) {
+                        $this->$k = $v;
+                    }
                 }
             }
 
