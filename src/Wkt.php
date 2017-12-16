@@ -518,9 +518,10 @@ class Wkt {
 		self::$wktProjections['Equirectangular'] = "eqc"; //EPSG:3786
 		self::$wktProjections["Sinusoidal"] = "sinu"; //SR-ORG:4741
 		self::$wktProjections["Stereographic"] = "stere"; //SR-ORG:6647
-
+		
 		// self::$wktProjections['VanDerGrinten']='vandg';
 		self::$wktProjections['Orthographic'] = 'ortho'; //SR-ORG:6980
+		self::$wktProjections['Mercator_Auxiliary_Sphere'] = 'merc'; //SR-ORG:7150
 		self::$wktProjections["Azimuthal_Equidistant"] = "aeqd"; //SR-ORG:7238
 		self::$wktProjections["Miller_Cylindrical"] = "mill"; //SR-ORG:8064
 		self::$wktProjections["Equidistant_Conic"] = "eqdc"; //SR-ORG:8159
